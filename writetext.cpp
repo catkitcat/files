@@ -9,11 +9,12 @@ int main( )
    float b = 68.123; 
    char c = 'J';
 	
-   ofstream writetext("abc.txt");
+   ofstream writetext("abc.bin",ios::binary);
    if (writetext)
    {
-		writetext<<a<<" "<<b<<" "<<c;//display data to console (i.e. as formatted chars)
-
+		writetext.read(reinterpret_cast<char*>(&a),sizeof(a);
+		writetext.read(reinterpret_cast<char*>(&b),sizeof(b);
+		writetext.read(reinterpret_cast<char*>(&c),sizeof(c);
 		cout<<endl<<endl;
 	}
 	else
